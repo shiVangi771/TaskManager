@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+    box-sizing:border-box;
+
+}
+.container{
+
+    width:100%;
+    min-height:100vh;
+    padding:10px;
+    background:linear-gradient( 135deg , #2E3192, #1BFFFF);
+}
+
+.todo{
+    width:100%;
+    max-width:540px;
+    background:white;
+    margin:100px auto 20px;
+    padding:40px 40px 70px;
+    border-radius:14px;
+
+}
+
+.todo h2{
+    color:#002765;
+    display:flex;
+    align-items: center;
+    margin-bottom:20px;
+    
+}
+
+.todo h2 img{
+  
+    margin-left:10px;
+    border-radius:50px;
+}
+.row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#98a1b1;
+    border-radius:30px;
+    padding-left:25px;
+    margin-bottom:25px;
+
+
+}
+input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:9px;
+    font-weight:15px;
+}
+button{
+    border:none;
+    outline:none;
+    padding:15px 50px;
+    background:#fa6352;
+    color:#fff;
+    font-size:17px;
+    cursor:pointer;
+    border-radius:50px;
+    transition:background-color 0.9s;
+    
+
+}
+button:hover{
+   background-color: #253c64;
+   
+}
+
+button:focus,
+button:active{
+    background-color:green;
+    transition:none;
+}
+ul li {
+    list-style:none;
+    font-size:16px;
+    padding:12px 8px 12px 50px;
+    user-select:none;
+    cursor:pointer;
+    position:relative;
+}
+
+ul li ::before{
+    content:'';
+    position:relative;
+    height:29px;
+    width:29px;
+    border-radius:50%;
+    /* background-image:url(https://www.svgrepo.com/show/309415/checkbox-unchecked.svg);
+    background-size:cover;
+    */
+    background-position:center;
+    top:12px;
+  left:9px;
+}
+
+ul li.checked{
+    color:#555;
+    text-decoration:line-through;
+
+}
+
+/* ul li.checked::before{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-phRZj27E4rt6MZRTHswyBKDmkKGriLaQ72OTFVaS5VvBni8MpbNyDmjLtSu7TvLrmV4&usqp=CAU);
+} */
+
+ul li span{
+position:absolute;
+right:0;
+top:4px;
+width:33px;
+height:31px;
+font-size:22px;
+color:#424141;
+line-height:40px;
+text-align:center;
+border-radius:50%;
+}
+
+ul li span:hover{
+    background:red ;
+}
